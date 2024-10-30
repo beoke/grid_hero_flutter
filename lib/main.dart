@@ -37,13 +37,20 @@ class _HomeState extends State<Home> {
 
       daftarSuperHero.add(
         Container(
-          padding: EdgeInsets.all(8),
-          child: Column(
-            children: <Widget> [
-              Image.asset("img/$gambar", fit: BoxFit.cover,),
-              Text(karakternya['nama']!,style: TextStyle(fontSize: 18.0),)
-              
-            ],
+          padding: EdgeInsets.all(10.0),
+          child: Card(
+            child: Column(
+              children: <Widget>[
+                Image.asset(
+                  "img/$gambar",
+                  height: 80,
+                ),
+                Text(
+                  karakternya['nama']!,
+                  style: TextStyle(fontSize: 18.0),
+                )
+              ],
+            ),
           ),
         ),
       );
