@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './Detail.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -39,7 +40,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.blue[400],
       ),
       body: GridView.builder(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(15.0),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           childAspectRatio: 0.7,
@@ -80,46 +81,11 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 10.0),
           Text(
             karakternya['nama']!,
             style: const TextStyle(
               fontSize: 18.0,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Detail extends StatelessWidget {
-  const Detail({super.key, required this.nama, required this.gambar});
-  final String nama;
-  final String gambar;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(nama),
-        backgroundColor: Colors.blue[400],
-      ),
-      body: ListView(
-        padding: const EdgeInsets.all(16.0),
-        children: [
-          Hero(
-            tag: nama,
-            child: Image.asset(
-              "img/$gambar",
-              fit: BoxFit.cover,
-            ),
-          ),
-          const SizedBox(height: 20),
-          Center(
-            child: Text(
-              nama,
-              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),
         ],
